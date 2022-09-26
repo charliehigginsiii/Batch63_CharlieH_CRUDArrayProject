@@ -3,7 +3,11 @@ package com.cogent.repo;
 import java.util.Scanner;
 
 import com.cogent.bean.CustomerBean;
-
+/**
+ * 
+ * @author Charlie Higgins
+ * @date   Sep 26, 2022
+ */
 public class CustomerRepo {
 	int size=0;
 	CustomerBean[] arr=new CustomerBean[0];
