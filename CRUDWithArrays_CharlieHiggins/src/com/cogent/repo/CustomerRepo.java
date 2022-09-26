@@ -37,18 +37,6 @@ public class CustomerRepo {
 				
 				l++;
 			}
-			/*for(int i=0;i<arr.length;i++) {
-				System.out.println(arr[i].getCustomerName());
-			}
-			System.out.println();
-			for(int i=0;i<newarr.length;i++) {
-				System.out.println(newarr[i].getCustomerName());
-			}
-			System.out.println();
-			for(int i=0;i<mergedarray.length;i++) {
-				System.out.println(mergedarray[i].getCustomerName());
-			}
-			System.out.println();*/
 			arr=mergedarray;
 			
 		}
