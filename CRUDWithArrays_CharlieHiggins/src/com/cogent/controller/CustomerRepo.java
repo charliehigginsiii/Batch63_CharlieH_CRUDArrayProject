@@ -24,20 +24,12 @@ public class CustomerRepo {
 			int l=0;
 			String added="";
 			for(int i=arr.length;i<mergedarray.length;i++) {
-				if(added.contains(newarr[l].toString())) {
-					mergedarray[i]=new CustomerBean("",0);
-				}else {
 					mergedarray[i]=newarr[l];
 					added+=newarr[l];
-				}
 				l++;
 			}
 			arr=mergedarray;
-			for(int i=0;i<mergedarray.length;i++) {
-				if(mergedarray[i].getCustomerName()!="") {
-					
-				}
-			}
+			
 		}
 	}
 	public CustomerBean[] viewAllCustoemrs() {
