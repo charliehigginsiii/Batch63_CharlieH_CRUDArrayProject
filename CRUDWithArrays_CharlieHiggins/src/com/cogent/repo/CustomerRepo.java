@@ -30,6 +30,7 @@ public class CustomerRepo {
 					mergedarray[i]=newarr[l];
 					added+=newarr[l];
 				}
+				
 				l++;
 			}
 			arr=mergedarray;
@@ -106,7 +107,9 @@ public class CustomerRepo {
 				CustomerBean[] arr=viewAllCustoemrs();
 				System.out.println("Name"+" | "+"Id");
 				for(int i=0;i<arr.length;i++) {
-					System.out.println(arr[i].getCustomerName()+" | "+arr[i].getCustomerId());
+					if(!arr[i].getCustomerName().contentEquals("")) {
+						System.out.println(arr[i].getCustomerName()+" | "+arr[i].getCustomerId());
+					}
 				}
 				System.out.println("Enter Y to contionue and enter N to exit program ");
 				String yesorno2=new Scanner(System.in).nextLine();
