@@ -12,6 +12,10 @@ import com.cogent.repo.CustomerRepo;
 public class CustomerManager {
 	public static void main(String[]args) {
 		new CustomerRepo().runProgram();
+		//CustomerRepo customers=new CustomerRepo();
+		//customers.addCustomer(new CustomerBean("Mark",1));
+		//customers.addCustomer(new CustomerBean("Joe",2));
+		//customers.print();
 	}
 
 }

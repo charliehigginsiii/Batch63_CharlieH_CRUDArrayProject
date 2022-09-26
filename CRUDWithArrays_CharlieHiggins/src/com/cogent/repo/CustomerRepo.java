@@ -14,7 +14,7 @@ public class CustomerRepo {
 	
 	//API Methods
 	public void addCustomer(CustomerBean customerBean) {
-		CustomerBean[] newarr=new CustomerBean[arr.length+1];
+		CustomerBean[] newarr=new CustomerBean[1];
 		for(int i=0;i<newarr.length;i++) {
 			newarr[i]=customerBean;
 		}
@@ -37,11 +37,29 @@ public class CustomerRepo {
 				
 				l++;
 			}
+			/*for(int i=0;i<arr.length;i++) {
+				System.out.println(arr[i].getCustomerName());
+			}
+			System.out.println();
+			for(int i=0;i<newarr.length;i++) {
+				System.out.println(newarr[i].getCustomerName());
+			}
+			System.out.println();
+			for(int i=0;i<mergedarray.length;i++) {
+				System.out.println(mergedarray[i].getCustomerName());
+			}
+			System.out.println();*/
 			arr=mergedarray;
 			
 		}
 	}
-	public CustomerBean[] viewAllCustoemrs() {
+	public void print() {
+		CustomerBean[] arr1=viewAllCustomers();
+		for(int i=0;i<arr1.length;i++) {
+			System.out.println(arr[i].getCustomerName());
+		}
+	}
+	public CustomerBean[] viewAllCustomers() {
 		return arr;
 	}
 	public CustomerBean searchCustomerById(long id) {
@@ -108,12 +126,10 @@ public class CustomerRepo {
 				}
 				break;
 			case 2:
-				CustomerBean[] arr=viewAllCustoemrs();
+				CustomerBean[] arr=viewAllCustomers();
 				System.out.println("Name"+" | "+"Id");
 				for(int i=0;i<arr.length;i++) {
-					if(!arr[i].getCustomerName().contentEquals("")) {
-						System.out.println(arr[i].getCustomerName()+" | "+arr[i].getCustomerId());
-					}
+					System.out.println(arr[i].getCustomerName()+" | "+arr[i].getCustomerId());
 				}
 				System.out.println("Enter Y to contionue and enter N to exit program ");
 				String yesorno2=new Scanner(System.in).nextLine();
