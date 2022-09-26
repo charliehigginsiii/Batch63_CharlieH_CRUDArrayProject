@@ -1,4 +1,4 @@
-package com.cogent.repo;
+package com.cogent.bean;
 
 public class CustomerBean {
 	private String customerName;

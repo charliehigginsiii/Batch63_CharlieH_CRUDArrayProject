@@ -1,8 +1,8 @@
-package com.cogent.controller;
+package com.cogent.repo;
 
 import java.util.Scanner;
 
-import com.cogent.repo.CustomerBean;
+import com.cogent.bean.CustomerBean;
 
 public class CustomerRepo {
 	int size=0;
@@ -24,8 +24,12 @@ public class CustomerRepo {
 			int l=0;
 			String added="";
 			for(int i=arr.length;i<mergedarray.length;i++) {
+				if(added.contains(newarr[l].toString())) {
+					mergedarray[i]=new CustomerBean("",0);
+				}else {
 					mergedarray[i]=newarr[l];
 					added+=newarr[l];
+				}
 				l++;
 			}
 			arr=mergedarray;
